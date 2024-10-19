@@ -16,3 +16,111 @@
 @import url('./badges.css');
 @import url('./back-link.css');
 @import url('./footer.css');
+
+img {
+  height: 200px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.values-container,
+.labels,
+form,
+.images-div {
+  display: flex;
+}
+
+input[type='submit'] {
+  font-weight: 500;
+  color: #fff;
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 91px;
+  background: #4e75ff;
+  border: none;
+}
+
+input[type='text'] {
+  border: 1px solid #808080;
+  border-radius: 4px;
+  width: 272px;
+  font-weight: 400;
+  color: #808080;
+  padding: 0 16px;
+}
+
+input[type='text'],
+input[type='submit'] {
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+}
+
+.images-div {
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.gallery-card {
+  width: 360px;
+  border: 1px solid #808080;
+}
+
+.values-container {
+  justify-content: space-around;
+}
+
+.labels {
+  flex-direction: column;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+.labels li:nth-child(1) {
+  font-weight: 600;
+  line-height: 133%;
+}
+
+.labels li:nth-child(2) {
+  font-weight: 400;
+  line-height: 200%;
+  text-align: center;
+}
+
+.values-container {
+  flex-wrap: wrap;
+}
+
+form {
+  justify-content: center;
+  padding: 32px 0;
+  gap: 8px;
+}
+
+.loaderClass {
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #fff;
+  border-bottom-color: #ff3d00;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  justify-content: center;
+  background: black;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
