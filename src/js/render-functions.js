@@ -34,11 +34,12 @@ function createCardsMarkup(cards) {
     .join('');
     
     loadSimpleLitebox(cartItem);
+    return cartItem;
 }
 
 function loadSimpleLitebox(cartItem) {
-    const gallery = document.querySelector("ul.images-div");
-    gallery.innerHTML = cartItem; 
+    //const gallery = document.querySelector("ul.images-div");
+    //gallery.innerHTML = cartItem; 
 
     if (galleryLightbox) {
         galleryLightbox.refresh();
@@ -50,4 +51,4 @@ function loadSimpleLitebox(cartItem) {
     }
 }
 
-export { createCardsMarkup };
+export { createCardsMarkup, loadSimpleLitebox };

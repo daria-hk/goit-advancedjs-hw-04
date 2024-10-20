@@ -30,7 +30,8 @@ form,
   display: flex;
 }
 
-input[type='submit'] {
+input[type='submit'],
+.load-more {
   font-weight: 500;
   color: #fff;
   border-radius: 8px;
@@ -38,6 +39,11 @@ input[type='submit'] {
   width: 91px;
   background: #4e75ff;
   border: none;
+}
+
+.load-more {
+  display: none;
+  margin: 16px auto;
 }
 
 input[type='text'] {
