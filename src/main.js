@@ -120,11 +120,13 @@ async function handleLoadmore() {
 
 function scrollByCards() {
   const galeryCard = document.querySelector(".gallery-card");
+  const cardHeight = galeryCard.getBoundingClientRect().height;
 
   window.scrollBy({
-     top: galeryCard.height * 2,
+     top: cardHeight * 2,
      behavior: "smooth" 
   });
+
 }
 
 async function handleImageLoading() {
