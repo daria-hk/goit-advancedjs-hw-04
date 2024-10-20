@@ -7,6 +7,7 @@ const fetchUsersBtn = document.querySelector("input[type=submit]");
 const imgs = document.querySelector("ul.images-div");
 const loaderClass = document.querySelector(".loaderClass");
 const loadMore = document.querySelector(".load-more");
+const loadingButton = document.querySelector(".loading-button");
 
 const params = {
   page: 1,
@@ -64,6 +65,7 @@ async function handleSearch(evt) {
 
     imgs.innerHTML = createCardsMarkup(data.hits);
     loadMore.style.display = params.page < params.maxPage ? "flex" : "none";
+    loadingButton.style.display = "none";
 
     await handleImageLoading();
     loadSimpleLitebox(); 
@@ -83,8 +85,10 @@ async function handleSearch(evt) {
 
 async function handleLoadmore() { 
   params.page += 1;
+  loadingButton.style.display = "flex";
 
   try {
+    loadMore.style.display = "none";
     loaderClass.style.display = "flex";
     const data = await getImg(params);
 
@@ -112,6 +116,12 @@ async function handleLoadmore() {
       color: "red",
     });
   } finally {
+    if (params.page >= params.maxPage) {
+      loadMore.style.display = "none";
+    } else {
+      loadMore.style.display = "flex";
+    }
+    loadingButton.style.display = "none";
     loaderClass.style.display = "none";
     console.log("Loader hidden");
   }

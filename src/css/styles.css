@@ -31,7 +31,8 @@ form,
 }
 
 input[type='submit'],
-.load-more {
+.load-more,
+.loading-button {
   font-weight: 500;
   color: #fff;
   border-radius: 8px;
@@ -41,7 +42,8 @@ input[type='submit'],
   border: none;
 }
 
-.load-more {
+.load-more,
+.loading-button {
   display: none;
   margin: 16px auto;
 }
