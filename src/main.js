@@ -58,7 +58,11 @@ async function handleSearch(evt) {
         messageColor: "white",
         titleColor: "yellow",
       });
+      notFoundTextEl.style.display = "flex";
+      loadMore.style.display = "none";
       return;
+    } else {
+      notFoundTextEl.style.display = "none";
     }
 
     params.maxPage = total_pages;
